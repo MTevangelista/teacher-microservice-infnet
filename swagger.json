@@ -1,0 +1,55 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Activity Microservice",
+        "description": "Assessment de Desenvolvimento de Software Ágil e Escalável com Microsserviços",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/teachers": {
+            "post": {
+                "summary": "Atribuir nota para atividade",
+                "description": "Essa rota será responsável por atribuir nota para atividade",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": { "$ref": "#/components/schemas/Activity" },
+                            "examples": {
+                                "activity": {
+                                    "value": {
+                                        "_id": "23423423423",
+                                        "grade": 5
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Activity"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }           
+    },
+    "components": {
+        "schemas": {
+            "Activity": {
+                "type": "object",
+                "properties": {
+                    "_id": { "type": "string" },
+                    "grade": { "type": "number" }
+                }
+            }            
+        }
+    }
+}

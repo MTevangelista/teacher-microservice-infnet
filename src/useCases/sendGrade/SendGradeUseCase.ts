@@ -8,7 +8,7 @@ export class SendGradeUseCase {
     async execute(data: ISendGradeRequestDTO) {
         let { _id, grade } = data
         try {
-            await activityService.put(`/activities/${_id}`, { grade })
+            await activityService.put(`/update/activities/${_id}`, { grade })
         } catch (err: any) {
             throw new AppError(400, err.message)
         }
