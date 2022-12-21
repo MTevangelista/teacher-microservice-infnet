@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Activity Microservice",
+        "title": "Teacher Microservice",
         "description": "Assessment de Desenvolvimento de Software Ágil e Escalável com Microsserviços",
         "version": "1.0.0"
     },
